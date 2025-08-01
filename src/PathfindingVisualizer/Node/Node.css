@@ -1,18 +1,21 @@
 .node {
   width: 25px;
   height: 25px;
-  outline: 1px solid rgb(175, 216, 248);
+  outline: 1px solid #d0e6ff;
   display: inline-block;
 }
 
-.node-finish {
-  background-color: green;
-}
-
+/* Start node: Bright Blue */
 .node-start {
-  background-color: red;
+  background-color: #1e90ff;
 }
 
+/* Finish node: Bright Orange */
+.node-finish {
+  background-color: #ff5733;
+}
+
+/* Visited nodes with animation */
 .node-visited {
   animation-name: visitedAnimation;
   animation-duration: 1.5s;
@@ -27,29 +30,31 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: rgba(0, 0, 66, 0.75);
+    background-color: #7f00ff;
     border-radius: 100%;
   }
 
   50% {
-    background-color: rgba(217, 17, 187, 0.75);
+    background-color: #e100ff;
   }
 
   75% {
     transform: scale(1.2);
-    background-color: rgba(34, 17, 217, 0.75);
+    background-color: #8a2be2;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgba(0, 218, 69, 0.75);
+    background-color: #00bcd4; /* Sky Blue instead of Green */
   }
 }
 
+/* Wall node: Dark Grey */
 .node-wall {
-  background-color: rgb(12, 53, 71);
+  background-color: #2f3640;
 }
 
+/* Shortest path: Gold with animation */
 .node-shortest-path {
   animation-name: shortestPath;
   animation-duration: 1.5s;
@@ -64,16 +69,18 @@
 @keyframes shortestPath {
   0% {
     transform: scale(0.6);
-    background-color: rgb(255, 254, 106);
+    background-color: #feca57;
   }
 
   50% {
     transform: scale(1.2);
-    background-color: rgb(255, 254, 106);
+    background-color: #ff9f43;
   }
 
   100% {
     transform: scale(1);
-    background-color: rgb(255, 254, 106);
+    background-color: #feca57;
   }
 }
+
+

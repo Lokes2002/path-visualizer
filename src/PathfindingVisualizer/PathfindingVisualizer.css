@@ -1,11 +1,85 @@
+/* style.css */
+
+/* Center the grid and reduce gap from title */
 .grid-container {
-  margin: 10% auto;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
+/* Grid container (table) */
 .grid {
-  white-space: pre;
+  display: inline-block;
+  white-space: nowrap;
+  border-spacing: 0;
 }
 
+/* Cell styling */
+.grid td {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+
+/* Node colors */
+.node-start {
+  background-color: #1976d2; /* dark blue */
+}
+
+.node-finish {
+  background-color: #c62828; /* dark red */
+}
+
+.node-wall {
+  background-color: #6d4c41; /* dark brown */
+}
+
+.node-visited {
+  background-color: #90caf9; /* light blue */
+  transition: background-color 0.2s ease-in;
+}
+
+.node-path {
+  background-color: #fdd835; /* yellow */
+  transition: background-color 0.2s ease-in;
+}
+
+/* Buttons */
 button {
-  margin: 2px;
+  margin: 4px;
+  padding: 8px 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Controls layout */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px auto;
+  gap: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .grid td {
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }
